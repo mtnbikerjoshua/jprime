@@ -34,7 +34,7 @@ params:
   logo:
     alt: Logo
     height: 50
-    url: logo.png
+    url: jprime.png
     width: 50
 markup:
   defaultMarkdownHandler: goldmark
