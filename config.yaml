@@ -24,7 +24,7 @@ params:
   MathJaxCDN: //cdnjs.cloudflare.com/ajax/libs
   MathJaxVersion: 2.7.5
   description: Personal website of Joshua Carpenter
-  favicon: jprime.ico
+  favicon: j-prime-logo5.ico
   highlightjsCDN: //cdnjs.cloudflare.com/ajax/libs
   highlightjsLang:
     - r
