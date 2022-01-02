@@ -14,7 +14,7 @@ permalinks:
   post: /:year/:month/:day/:slug/
 menu:
   main:
-    - name: About Me
+    - name: About
       url: /
     - name: Blog
       url: /blog/
