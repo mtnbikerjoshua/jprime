@@ -12,7 +12,7 @@ library(tidyverse)
 
 ```{r}
 mental_health_deaths_2019 <- read_csv("content/blog/2022-01-04-world-suicide/IHME-GBD_2019_DATA-0ac35aa0-1.csv")
-view(mental_health_deaths_2019)
-mental_health_deaths_2019 %>% filter(location_name == "United States")
+# view(mental_health_deaths_2019)
+# mental_health_deaths_2019 %>% filter(location_name == "United States")
 ```
 
