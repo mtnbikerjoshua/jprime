@@ -18,10 +18,13 @@ menu:
       url: /
       weight: 1
     - name: Portfolio
-      url: /portfolio.html
+      url: /portfolio
       weight: 2
     - name: Blog
       url: /blog/
+      weight: 3
+    - name: LinkedIn
+      url: https://www.linkedin.com/in/joshua-carpenter-a119b9140/
       weight: 3
     - name: GitHub
       url: https://github.com/mtnbikerjoshua
