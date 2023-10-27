@@ -1,1 +1,1 @@
-blogdown::build_site()
+blogdown::build_dir("content")
