@@ -1,0 +1,59 @@
+---
+title: "P8105 Homework 4"
+date: "2023-10-30"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(tidyverse)
+library(plotly)
+library(p8105.datasets)
+data("instacart")
+```
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Chart A
+
+```{r}
+instacart <- instacart |> 
+  slice_head(n = 10000)
+
+instacart |> 
+  group_by(days_since_prior_order) |> 
+  summarise(density = count(days_since_prior_order) / sum)
+
+dist_nbinom <- dnbinom(1:30,  1, mu = mean(instacart$days_since_prior_order))
+
+instacart |> 
+  group_by(days_since_prior_order) |> 
+  summarise(density = density(days_since_prior_order))
+  plot_ly(x = ~days_since_prior_order, type = 'histogram')
+  
+instacart |> 
+  plot_ly(x = days_since_prior_order, type = "histogram", 
+          name = "Days Since Prior Order") |> 
+  add_trace(x = fit$x, y = fit$y, type = "scatter", mode = "lines", fill = "tozeroy", yaxis = "y2", name = "Density") |> 
+  layout(yaxis2 = list(overlaying = "y", side = "right"))
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Chart B
+
+```{r}
+
+```
+
+### Chart C
+
+```{r}
+
+```
+
