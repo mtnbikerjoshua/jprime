@@ -21,25 +21,13 @@ Column {data-width=650}
 ### Chart A
 
 ```{r}
+# The dataset uses 30 to denote >30, so I remove 30 to make the plot easier to read
 instacart <- instacart |> 
-  slice_head(n = 10000)
-
-instacart |> 
-  group_by(days_since_prior_order) |> 
-  summarise(density = count(days_since_prior_order) / sum)
-
-dist_nbinom <- dnbinom(1:30,  1, mu = mean(instacart$days_since_prior_order))
-
-instacart |> 
-  group_by(days_since_prior_order) |> 
-  summarise(density = density(days_since_prior_order))
-  plot_ly(x = ~days_since_prior_order, type = 'histogram')
+  filter(days_since_prior_order < 30)
   
 instacart |> 
-  plot_ly(x = days_since_prior_order, type = "histogram", 
-          name = "Days Since Prior Order") |> 
-  add_trace(x = fit$x, y = fit$y, type = "scatter", mode = "lines", fill = "tozeroy", yaxis = "y2", name = "Density") |> 
-  layout(yaxis2 = list(overlaying = "y", side = "right"))
+  plot_ly(x = ~days_since_prior_order, type = "histogram", 
+          name = "Days Since Prior Order")
 ```
 
 Column {data-width=350}
