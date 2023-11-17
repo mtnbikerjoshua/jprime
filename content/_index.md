@@ -1,8 +1,8 @@
 ---
-date: "2022-01-01T19:37:51-07:00"
+date: "2023-11-16"
 title: About Me
 ---
 
-I am a data scientist and statistician, who cleans, explores, and analyzes data in R, python, and SAS. Unlike most statistics graduates, I’m an experienced programmer who has worked in server administration and software development. Because of that experience, I can read documentation, I’ve collaborated using git, I can deal with messy data, and I can take responsibility for a project and carry it through to the end.
+I'm a biostatistician seeking to make the world physically and mentally well. Unlike most biostatistics students, I’m an experienced programmer who has worked in server administration and software development. Because of that experience, I can read documentation, I’ve collaborated using git, I can deal with messy data, and I can take responsibility for a project and carry it through to the end. I hope to apply my technical background to tackle the complex causal web of mental health challenges.
 
-Email me at [mtnbikerjoshua@gmail.com](mailto:mtnbikerjoshua@gmail.com)
+Email me at [jrc2270@cumc.columbia.edu](mailto:jrc2270@cumc.columbia.edu)
