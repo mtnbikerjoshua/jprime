@@ -1,0 +1,69 @@
+---
+title: "My 2.5 Hour Commute: Public Transit Inequality in Buenos Aires"
+author: "Joshua Carpenter"
+date: "4 Nov 2024"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+library(sf)
+library(tidyverse)
+
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, results = FALSE)
+```
+
+After just a few days, I learned to tell the 96 bus apart from the 98 by their colors, but I still had to step out into the middle of the street to squint for the orange letter "S" indicating "semirápido", meaning express. Although several Line 96 buses passed by every hour, only the semirápido to Pontevedra got me where I needed to go, and those seemed to be the least common. Thankfully, I usually had several podcasts lined up and a set of Spanish flashcards in my bag to keep me entertained. On a good day, I left my apartment at 10:00 and reached the center for malnourished children by 12:30. I had known what I was signing up for when I booked an AirBnB so far from the center, but I had no other choice. It seemed that there was no safe place to live within two hours of the center on public transit. It didn't dawn on me until later that the trains were designed to section off that run-down and malnourished neighborhood from the rest. Though less obvious than Rio De Janeiro's "wall of shame," Buenos Aires has its own way of dividing the poor from the rich&mdash;public transit.
+
+
+
+```{r}
+# Income data by comuna in Bueanos Aires
+income_data <- data.frame(
+  comuna = c("Comuna 1", "Comuna 2", "Comuna 3", "Comuna 4", "Comuna 5", "Comuna 6",
+             "Comuna 7", "Comuna 8", "Comuna 9", "Comuna 10", "Comuna 11", "Comuna 12",
+             "Comuna 13", "Comuna 14", "Comuna 15"),
+  ingreso = c(102102, 153796, 96437, 70572, 124227, 137843, 102870, 48860, 
+                         82966, 95299, 116131, 118806, 154354, 158606, 125320)
+)
+
+# Load map data
+comuna_map <- st_read("arg_admbnda_adm2_unhcr2017.shp")
+rail_map <- st_read("ba_rails.geojson") %>%
+  filter(is.na(service), !is.na(network)) %>%
+  mutate(network = case_when(
+    network == "Belgrano" & map(geometry, ~max(st_coordinates(.x)[,"Y"])) < -34.6 ~ "Belgrano Sur",
+    .default = "Other"),
+         geometry = st_sfc(
+           map(geometry, function(x) {
+             coords <- st_coordinates(x)
+             in_range <- coords[,"Y"] < -34.53
+             st_linestring(coords[in_range, c("X", "Y")])
+           }), crs = 4326))
+subway_map <- st_read("ba_subways.geojson")
+
+# Join the income data with the shapefile based on 'comuna'
+map_data <-  income_data %>%
+  left_join(comuna_map, by = c("comuna" = "ADM2_REF"))
+
+# Create the map
+ggplot(map_data) +
+  geom_sf(aes(geometry = geometry, fill = ingreso)) +
+  scale_fill_gradient(high = "white", low = "#a30000") +
+  # Rail data
+  geom_sf(data = rail_map, mapping = aes(color = network),
+          linewidth = 2, lineend = "round") +
+  scale_color_manual(values = c("Belgrano Sur" = "#fcba03", "Other" = "#575757")) +
+  # Subway data
+  geom_sf(data = subway_map, color = "#575757", linewidth = 2, lineend = "round") +
+  theme_minimal() +
+  theme(
+    legend.position = "none",      # Remove legend
+    panel.grid = element_blank(),  # Remove grid lines
+    axis.title = element_blank(),  # Remove axis labels
+    axis.text = element_blank(),   # Remove axis text
+    axis.ticks = element_blank(),   # Remove axis ticks
+    plot.title = element_text(hjust = 0.5)  # Center the title
+  ) +
+  labs(title = "Public Transit Compared to Average\nPer Capita Income in Buenos Aires")
+```
+
