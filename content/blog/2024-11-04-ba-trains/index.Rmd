@@ -1,7 +1,7 @@
 ---
 title: "My 2.5 Hour Commute: Public Transit Inequality in Buenos Aires"
 author: "Joshua Carpenter"
-date: "4 Nov 2024"
+date: "2024-11-04"
 output: html_document
 ---
 
@@ -12,12 +12,14 @@ library(tidyverse)
 knitr::opts_chunk$set(echo = FALSE, message = FALSE, results = FALSE)
 ```
 
+![](linea_belgrano_sur_exterior.jpg)
+
 After just a few days, I learned to tell the 96 bus apart from the 98 by their colors, but I still had to step out into the middle of the street to squint for the orange letter "S" indicating "semirápido", meaning express. Although several Line 96 buses passed by every hour, only the semirápido to Pontevedra got me where I needed to go, and those seemed to be the least common. Thankfully, I usually had several podcasts lined up and a set of Spanish flashcards in my bag to keep me entertained. On a good day, I left my apartment at 10:00 and reached the center for malnourished children by 12:30. I had known what I was signing up for when I booked an AirBnB so far from the center, but I had no other choice. It seemed that there was no safe place to live within two hours of the center on public transit. It didn't dawn on me until later that the trains were designed to section off that run-down and malnourished neighborhood from the rest. Though less obvious than Rio De Janeiro's "wall of shame," Buenos Aires has its own way of dividing the poor from the rich&mdash;public transit.
 
 
 
 
-```{r}
+```{r fig.width=8, fig.height=4}
 # Income data by comuna in Bueanos Aires
 income_data <- data.frame(
   comuna = c("Comuna 1", "Comuna 2", "Comuna 3", "Comuna 4", "Comuna 5", "Comuna 6",
