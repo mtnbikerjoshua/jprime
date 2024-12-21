@@ -2,23 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>//localhost:4321/blog/2024-11-04-ba-trains/</loc>
+    <loc>/blog/2024-11-04-ba-trains/</loc>
     <lastmod>2024-11-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:4321/</loc>
+    <loc>/</loc>
     <lastmod>2023-11-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:4321/blog/2023-11-16-no-posts-yet/</loc>
+    <loc>/blog/2023-11-16-no-posts-yet/</loc>
     <lastmod>2023-11-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:4321/portfolio/</loc>
+    <loc>/portfolio/</loc>
     <lastmod>2023-10-26T20:42:00-07:00</lastmod>
   </url><url>
-    <loc>//localhost:4321/blog/</loc>
+    <loc>/blog/</loc>
     <lastmod>2021-12-20T17:59:51-04:00</lastmod>
   </url><url>
-    <loc>//localhost:4321/categories/</loc>
+    <loc>/categories/</loc>
   </url><url>
-    <loc>//localhost:4321/tags/</loc>
+    <loc>/tags/</loc>
   </url>
 </urlset>

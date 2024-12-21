@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blog on jPrime</title>
-    <link>//localhost:4321/blog/</link>
+    <link>/blog/</link>
     <description>Recent content in Blog on jPrime</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 04 Nov 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="//localhost:4321/blog/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>My 2.5 Hour Commute: Public Transit Inequality in Buenos Aires</title>
-      <link>//localhost:4321/blog/2024-11-04-ba-trains/</link>
+      <link>/blog/2024-11-04-ba-trains/</link>
       <pubDate>Mon, 04 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>//localhost:4321/blog/2024-11-04-ba-trains/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;linea_belgrano_sur_exterior.jpg&#34; /&gt;&lt;/p&gt;&#xA;&lt;p&gt;After just a few days, I learned to tell the 96 bus apart from the 98 by their colors, but I still had to step out into the middle of the street to squint for the orange letter “S” indicating “semirápido”, meaning express. Although several Line 96 buses passed by every hour, only the semirápido to Pontevedra got me where I needed to go, and those seemed to be the least common. Thankfully, I usually had several podcasts lined up and a set of Spanish flashcards in my bag to keep me entertained. On a good day, I left my apartment at 10:00 and reached the center for malnourished children by 12:30. I had known what I was signing up for when I booked an AirBnB so far from the center, but I had no other choice. It seemed that there was no safe place to live within two hours of the center on public transit. It didn’t dawn on me until later that the trains were designed to section off that run-down and malnourished neighborhood from the rest. Though less obvious than Rio De Janeiro’s “wall of shame,” Buenos Aires has its own way of dividing the poor from the rich—public transit.&lt;/p&gt;</description>
+      <guid>/blog/2024-11-04-ba-trains/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;linea_belgrano_sur_exterior.jpg&#34; /&gt;&lt;/p&gt;&#xA;&lt;p&gt;After just a few days, I learned to tell the 96 bus apart from the 98 by their colors, but I still had to step out into the middle of the street to squint for the orange placard with a letter “S” indicating “semirápido”, meaning express. Although several Line 96 buses passed by every hour, only the semirápido to Pontevedra got me where I needed to go, and those seemed to be the least common. Thankfully, I usually had several podcasts lined up and a set of Spanish flashcards in my bag to keep me entertained. On a good day, I left my apartment at 10:00 and reached the center for malnourished children by 12:30. I had known what I was signing up for when I booked an AirBnB so far from the center, but I had no other choice. It seemed that there was no safe place to live within two hours of the center on public transit. It didn’t dawn on me until later that the trains were designed to section off that run-down and malnourished neighborhood from the rest. Though less obvious than Rio De Janeiro’s “wall of shame,” Buenos Aires has its own way of dividing the poor from the rich—public transit.&lt;/p&gt;</description>
     </item>
     <item>
       <title>No Blog Posts Yet...</title>
-      <link>//localhost:4321/blog/2023-11-16-no-posts-yet/</link>
+      <link>/blog/2023-11-16-no-posts-yet/</link>
       <pubDate>Thu, 16 Nov 2023 00:00:00 +0000</pubDate>
-      <guid>//localhost:4321/blog/2023-11-16-no-posts-yet/</guid>
+      <guid>/blog/2023-11-16-no-posts-yet/</guid>
       <description>&lt;p&gt;You know when you decide to start blogging, but never get around to making your first post? Yeah&amp;hellip;&lt;/p&gt;&#xA;&lt;p&gt;Here are some topics I plan to blog about in the future:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;AI therapy - effective? Are robotic therapy tools an effective way to reach more people or a hindrance to human communication?&lt;/li&gt;&#xA;&lt;li&gt;My experience switching to full-time Linux&lt;/li&gt;&#xA;&lt;li&gt;Open source code in commercial applications&lt;/li&gt;&#xA;&lt;li&gt;Data Science: A Misnomer. Data science is a tool to help the other sciences.&lt;/li&gt;&#xA;&lt;li&gt;Are mental health disorders man-made?&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
   </channel>
