@@ -1,6 +1,7 @@
 ---
 date: "2023-11-16"
 title: No Blog Posts Yet...
+draft: true
 ---
 
 You know when you decide to start blogging, but never get around to making your first post? Yeah...
