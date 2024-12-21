@@ -16,6 +16,7 @@ After just a few days, I learned to tell the 96 bus apart from the 98 by their c
 
 
 
+
 ```{r}
 # Income data by comuna in Bueanos Aires
 income_data <- data.frame(
@@ -32,7 +33,7 @@ rail_map <- st_read("ba_rails.geojson") %>%
   filter(is.na(service), !is.na(network)) %>%
   mutate(network = case_when(
     network == "Belgrano" & map(geometry, ~max(st_coordinates(.x)[,"Y"])) < -34.6 ~ "Belgrano Sur",
-    .default = "Other"),
+    .default = "Light Rail"),
          geometry = st_sfc(
            map(geometry, function(x) {
              coords <- st_coordinates(x)
@@ -40,6 +41,13 @@ rail_map <- st_read("ba_rails.geojson") %>%
              st_linestring(coords[in_range, c("X", "Y")])
            }), crs = 4326))
 subway_map <- st_read("ba_subways.geojson")
+
+subway_and_rail_map <-
+  subway_map %>%
+  mutate(network = "Subway") %>%
+  bind_rows(rail_map) %>%
+  mutate(network = factor(network, levels = c("Subway", "Light Rail", "Belgrano Sur"), 
+                          labels = c("Subway", "Light Rail", "Belgrano Sur")))
 
 # Join the income data with the shapefile based on 'comuna'
 map_data <-  income_data %>%
@@ -49,21 +57,24 @@ map_data <-  income_data %>%
 ggplot(map_data) +
   geom_sf(aes(geometry = geometry, fill = ingreso)) +
   scale_fill_gradient(high = "white", low = "#a30000") +
-  # Rail data
-  geom_sf(data = rail_map, mapping = aes(color = network),
+  # Rail and subway data
+  geom_sf(data = subway_and_rail_map, mapping = aes(color = network),
           linewidth = 2, lineend = "round") +
-  scale_color_manual(values = c("Belgrano Sur" = "#fcba03", "Other" = "#575757")) +
-  # Subway data
-  geom_sf(data = subway_map, color = "#575757", linewidth = 2, lineend = "round") +
+  scale_color_manual(values = c("Light Rail" = "#575757", 
+                                "Subway" = "#807e7e",
+                                "Belgrano Sur" = "#fcba03"),
+                     name = element_blank()) +
   theme_minimal() +
   theme(
-    legend.position = "none",      # Remove legend
+    legend.position = "inside",
+    legend.position.inside = c(0.8, 0.15),   # Set legend position
     panel.grid = element_blank(),  # Remove grid lines
     axis.title = element_blank(),  # Remove axis labels
     axis.text = element_blank(),   # Remove axis text
     axis.ticks = element_blank(),   # Remove axis ticks
     plot.title = element_text(hjust = 0.5)  # Center the title
   ) +
+  guides(fill = "none", color = guide_legend(label.position = "left")) +
   labs(title = "Public Transit Compared to Average\nPer Capita Income in Buenos Aires")
 ```
 
