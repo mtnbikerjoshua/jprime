@@ -2,43 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/blog/2023-10-30-p8105-hw4/</loc>
-    <lastmod>2023-11-01T00:00:00+00:00</lastmod>
+    <loc>//localhost:4321/blog/2024-11-04-ba-trains/</loc>
+    <lastmod>2024-11-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/portfolio/</loc>
+    <loc>//localhost:4321/</loc>
+    <lastmod>2023-11-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>//localhost:4321/blog/2023-11-16-no-posts-yet/</loc>
+    <lastmod>2023-11-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>//localhost:4321/portfolio/</loc>
     <lastmod>2023-10-26T20:42:00-07:00</lastmod>
   </url><url>
-    <loc>/</loc>
-    <lastmod>2022-01-01T19:37:51-07:00</lastmod>
-  </url><url>
-    <loc>/blog/</loc>
+    <loc>//localhost:4321/blog/</loc>
     <lastmod>2021-12-20T17:59:51-04:00</lastmod>
   </url><url>
-    <loc>/categories/</loc>
-    <lastmod>2020-12-01T21:13:14-05:00</lastmod>
+    <loc>//localhost:4321/categories/</loc>
   </url><url>
-    <loc>/blog/2020-12-01-r-rmarkdown/</loc>
-    <lastmod>2020-12-01T21:13:14-05:00</lastmod>
-  </url><url>
-    <loc>/tags/plot/</loc>
-    <lastmod>2020-12-01T21:13:14-05:00</lastmod>
-  </url><url>
-    <loc>/categories/r/</loc>
-    <lastmod>2020-12-01T21:13:14-05:00</lastmod>
-  </url><url>
-    <loc>/tags/r-markdown/</loc>
-    <lastmod>2020-12-01T21:13:14-05:00</lastmod>
-  </url><url>
-    <loc>/tags/regression/</loc>
-    <lastmod>2020-12-01T21:13:14-05:00</lastmod>
-  </url><url>
-    <loc>/tags/</loc>
-    <lastmod>2020-12-01T21:13:14-05:00</lastmod>
-  </url><url>
-    <loc>/blog/2016-12-30-hello-markdown/</loc>
-    <lastmod>2016-12-30T21:49:57-07:00</lastmod>
-  </url><url>
-    <loc>/blog/2015-01-01-lorem-ipsum/</loc>
-    <lastmod>2015-01-01T13:09:13-06:00</lastmod>
+    <loc>//localhost:4321/tags/</loc>
   </url>
 </urlset>

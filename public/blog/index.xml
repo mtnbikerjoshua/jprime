@@ -2,49 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blog on jPrime</title>
-    <link>/blog/</link>
+    <link>//localhost:4321/blog/</link>
     <description>Recent content in Blog on jPrime</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 20 Dec 2021 17:59:51 -0400</lastBuildDate><atom:link href="/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 04 Nov 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:4321/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>P8104 Homework 4</title>
-      <link>/blog/2023-10-30-p8105-hw4/</link>
-      <pubDate>Wed, 01 Nov 2023 00:00:00 +0000</pubDate>
-      
-      <guid>/blog/2023-10-30-p8105-hw4/</guid>
-      <description>You can access my flexdashboard here.</description>
+      <title>My 2.5 Hour Commute: Public Transit Inequality in Buenos Aires</title>
+      <link>//localhost:4321/blog/2024-11-04-ba-trains/</link>
+      <pubDate>Mon, 04 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:4321/blog/2024-11-04-ba-trains/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;linea_belgrano_sur_exterior.jpg&#34; /&gt;&lt;/p&gt;&#xA;&lt;p&gt;After just a few days, I learned to tell the 96 bus apart from the 98 by their colors, but I still had to step out into the middle of the street to squint for the orange letter “S” indicating “semirápido”, meaning express. Although several Line 96 buses passed by every hour, only the semirápido to Pontevedra got me where I needed to go, and those seemed to be the least common. Thankfully, I usually had several podcasts lined up and a set of Spanish flashcards in my bag to keep me entertained. On a good day, I left my apartment at 10:00 and reached the center for malnourished children by 12:30. I had known what I was signing up for when I booked an AirBnB so far from the center, but I had no other choice. It seemed that there was no safe place to live within two hours of the center on public transit. It didn’t dawn on me until later that the trains were designed to section off that run-down and malnourished neighborhood from the rest. Though less obvious than Rio De Janeiro’s “wall of shame,” Buenos Aires has its own way of dividing the poor from the rich—public transit.&lt;/p&gt;</description>
     </item>
-    
     <item>
-      <title>Hello R Markdown</title>
-      <link>/blog/2020-12-01-r-rmarkdown/</link>
-      <pubDate>Tue, 01 Dec 2020 21:13:14 -0500</pubDate>
-      
-      <guid>/blog/2020-12-01-r-rmarkdown/</guid>
-      <description>R Markdown This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
-You can embed an R code chunk like this:
-summary(cars) ## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 26.00 ## Median :15.0 Median : 36.00 ## Mean :15.4 Mean : 42.98 ## 3rd Qu.</description>
+      <title>No Blog Posts Yet...</title>
+      <link>//localhost:4321/blog/2023-11-16-no-posts-yet/</link>
+      <pubDate>Thu, 16 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>//localhost:4321/blog/2023-11-16-no-posts-yet/</guid>
+      <description>&lt;p&gt;You know when you decide to start blogging, but never get around to making your first post? Yeah&amp;hellip;&lt;/p&gt;&#xA;&lt;p&gt;Here are some topics I plan to blog about in the future:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;AI therapy - effective? Are robotic therapy tools an effective way to reach more people or a hindrance to human communication?&lt;/li&gt;&#xA;&lt;li&gt;My experience switching to full-time Linux&lt;/li&gt;&#xA;&lt;li&gt;Open source code in commercial applications&lt;/li&gt;&#xA;&lt;li&gt;Data Science: A Misnomer. Data science is a tool to help the other sciences.&lt;/li&gt;&#xA;&lt;li&gt;Are mental health disorders man-made?&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
-    
-    <item>
-      <title>A Plain Markdown Post</title>
-      <link>/blog/2016-12-30-hello-markdown/</link>
-      <pubDate>Fri, 30 Dec 2016 21:49:57 -0700</pubDate>
-      
-      <guid>/blog/2016-12-30-hello-markdown/</guid>
-      <description>This is a post written in plain Markdown (*.md) instead of R Markdown (*.Rmd). The major differences are:
- You cannot run any R code in a plain Markdown document, whereas in an R Markdown document, you can embed R code chunks (```{r}); A plain Markdown post is rendered through Blackfriday, and an R Markdown document is compiled by rmarkdown and Pandoc.  There are many differences in syntax between Blackfriday&amp;rsquo;s Markdown and Pandoc&amp;rsquo;s Markdown.</description>
-    </item>
-    
-    <item>
-      <title>Lorem Ipsum</title>
-      <link>/blog/2015-01-01-lorem-ipsum/</link>
-      <pubDate>Thu, 01 Jan 2015 13:09:13 -0600</pubDate>
-      
-      <guid>/blog/2015-01-01-lorem-ipsum/</guid>
-      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
-    </item>
-    
   </channel>
 </rss>
