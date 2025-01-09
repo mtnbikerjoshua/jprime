@@ -9,7 +9,7 @@ output: html_document
 library(sf)
 library(tidyverse)
 
-knitr::opts_chunk$set(echo = FALSE, message = FALSE, results = FALSE)
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, results = FALSE, warning = FALSE)
 ```
 
 ![](linea_belgrano_sur_exterior.jpg)
@@ -62,26 +62,39 @@ map_data <-  income_data %>%
 # Create the map
 ggplot(map_data) +
   geom_sf(aes(geometry = geometry, fill = ingreso)) +
-  scale_fill_gradient(high = "white", low = "#a30000") +
+  scale_fill_gradient(high = "white", low = "#a30000",
+                      breaks = c(min(income_data$ingreso), max(income_data$ingreso)),
+                      labels = c("Lower", "Higher"),
+                      name = "Income") +
   # Rail and subway data
   geom_sf(data = subway_and_rail_map, mapping = aes(color = network),
           linewidth = 2, lineend = "round") +
   scale_color_manual(values = c("Light Rail" = "#575757", 
                                 "Subway" = "#807e7e",
                                 "Belgrano Sur" = "#fcba03"),
-                     name = element_blank()) +
+                     name = "Train Line") +
   theme_minimal() +
   theme(
     legend.position = "inside",
     legend.position.inside = c(0.8, 0.15),   # Set legend position
+    legend.box = "horizontal",  # Horizontal legend
+    legend.justification = c(0.62, 0.55),
+    legend.spacing.x = unit(0.2, "cm"),
+    legend.text = element_text(size = 10),
+    legend.title = element_text(hjust = 0.5, margin = margin(b = 7)),
     panel.grid = element_blank(),  # Remove grid lines
     axis.title = element_blank(),  # Remove axis labels
     axis.text = element_blank(),   # Remove axis text
     axis.ticks = element_blank(),   # Remove axis ticks
-    plot.title = element_text(hjust = 0.5, size = 18),  # Center the title
-    legend.text = element_text(size = 12)
+    plot.title = element_text(hjust = 0.5, size = 18)  # Center the title
   ) +
-  guides(fill = "none", color = guide_legend(label.position = "left")) +
+  guides(color = guide_legend(label.position = "left"),
+         fill = guide_colorbar(label.position = "left",
+                               barheight = 3.5,
+                               frame.colour = "black",
+                               ticks.colour = NA,
+                               label.theme = element_text(vjust = c(0, 1)),
+                               order = 1)) +
   labs(title = "Public Transit Compared to Average\nPer Capita Income in Buenos Aires")
 ```
 
@@ -93,55 +106,19 @@ Thankfully, the plans to shut the line down never came to fruition, and today th
 The interior of Línea Belgrano Sur on a rainy spring day.
 
 ```{r fig.height=7, fig.width=7}
-library(sf)
-library(tidyverse)
-
-# Income data by comuna in Buenos Aires
-income_data <- data.frame(
-  comuna = c("Comuna 1", "Comuna 2", "Comuna 3", "Comuna 4", "Comuna 5", "Comuna 6",
-             "Comuna 7", "Comuna 8", "Comuna 9", "Comuna 10", "Comuna 11", "Comuna 12",
-             "Comuna 13", "Comuna 14", "Comuna 15"),
-  ingreso = c(102102, 153796, 96437, 70572, 124227, 137843, 102870, 48860, 
-                         82966, 95299, 116131, 118806, 154354, 158606, 125320)
-)
-
-# Load map data
-comuna_map <- st_read("arg_admbnda_adm2_unhcr2017.shp")
-rail_map <- st_read("ba_rails.geojson") %>%
-  filter(is.na(service), !is.na(network)) %>%
-  mutate(network = case_when(
-    network == "Belgrano" & map(geometry, ~max(st_coordinates(.x)[,"Y"])) < -34.6 ~ "Belgrano Sur",
-    .default = "Light Rail"),
-         geometry = st_sfc(
-           map(geometry, function(x) {
-             coords <- st_coordinates(x)
-             in_range <- coords[,"Y"] < -34.53
-             st_linestring(coords[in_range, c("X", "Y")])
-           }), crs = 4326))
-subway_map <- st_read("ba_subways.geojson")
-
-subway_and_rail_map <-
-  subway_map %>%
-  mutate(network = "Subway") %>%
-  bind_rows(rail_map) %>%
-  mutate(network = factor(network, levels = c("Subway", "Light Rail", "Belgrano Sur"), 
-                          labels = c("Subway", "Light Rail", "Belgrano Sur")))
-
-# Join the income data with the shapefile based on 'comuna'
-map_data <-  income_data %>%
-  left_join(comuna_map, by = c("comuna" = "ADM2_REF"))
-
-# Create the map
 ggplot(map_data) +
   geom_sf(aes(geometry = geometry, fill = ingreso)) +
-  scale_fill_gradient(high = "white", low = "#a30000") +
+  scale_fill_gradient(high = "white", low = "#a30000",
+                      breaks = c(min(income_data$ingreso), max(income_data$ingreso)),
+                      labels = c("Lower", "Higher"),
+                      name = "Income") +
   # Rail and subway data
   geom_sf(data = subway_and_rail_map, mapping = aes(color = network),
           linewidth = 2, lineend = "round") +
   scale_color_manual(values = c("Light Rail" = "#575757", 
                                 "Subway" = "#807e7e",
                                 "Belgrano Sur" = "#fcba03"),
-                     name = element_blank()) +
+                     name = "Train Line") +
   annotate("point", x = -58.38047, y = -34.62825, color = "#fcba03", 
            fill = "#fcba03", size = 6, shape = 24) +
   annotate("label", x = -58.375, y = -34.617, label = "Plaza Constitución", 
@@ -150,18 +127,28 @@ ggplot(map_data) +
   theme(
     legend.position = "inside",
     legend.position.inside = c(0.8, 0.15),   # Set legend position
+    legend.box = "horizontal",  # Horizontal legend
+    legend.justification = c(0.62, 0.55),
+    legend.spacing.x = unit(0.2, "cm"),
+    legend.text = element_text(size = 10),
+    legend.title = element_text(hjust = 0.5, margin = margin(b = 7)),
     panel.grid = element_blank(),  # Remove grid lines
     axis.title = element_blank(),  # Remove axis labels
     axis.text = element_blank(),   # Remove axis text
     axis.ticks = element_blank(),   # Remove axis ticks
-    plot.title = element_text(hjust = 0.5, size = 18),  # Center the title
-    legend.text = element_text(size = 12)
+    plot.title = element_text(hjust = 0.5, size = 18)  # Center the title
   ) +
-  guides(fill = "none", color = guide_legend(label.position = "left")) +
+  guides(color = guide_legend(label.position = "left"),
+         fill = guide_colorbar(label.position = "left",
+                               barheight = 3.5,
+                               frame.colour = "black",
+                               ticks.colour = NA,
+                               label.theme = element_text(vjust = c(0, 1)),
+                               order = 1)) +
   labs(title = "Public Transit Compared to Average\nPer Capita Income in Buenos Aires")
 ```
 
-Work is almost complete to extend Línea Belgrano Sur to Plaza Constitución
+Work is almost complete to extend the Línea Belgrano Sur to Plaza Constitución
 
 Data sources:
 
