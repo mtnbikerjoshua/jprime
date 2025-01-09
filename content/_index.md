@@ -1,8 +1,10 @@
 ---
-date: "2023-11-16"
+date: "2025-01-09"
 title: About Me
 ---
 
-I'm a biostatistician seeking to make the world physically and mentally well. Unlike most biostatistics students, I’m an experienced programmer who has worked in server administration and software development. Because of that experience, I can read documentation, I’ve collaborated using git, I can deal with messy data, and I can take responsibility for a project and carry it through to the end. I hope to apply my technical background to tackle the complex causal web of mental health challenges.
+My name is Joshua Carpenter, and I'm a biostatistician using my technical skillset to mitigate childhood trauma and improve quality of life for children around the world. Despite my focus on data, I place high importance on interdisciplinary collaboration and close-up experience with public health issues. This website is my personal portfolio and is designed to showcase both my soft skills and my technical ones. I'm not only a statistician, but also an advocate for children, and I'll use all the skills I have at my disposal for that cause, from making a graph to telling a compelling story to caulking a window.
 
-Email me at [jrc2270@cumc.columbia.edu](mailto:jrc2270@cumc.columbia.edu)
+My current projects include providing trauma-informed care training to organizations in NYC, eradicating childhood malnutrition in Argentina, and researching the genetic transmission of obesity, as well as pursuing a Masters in Biostatistics from the Columbia University Mailman School of Public Health, graduating in May 2025.
+
+You can contact me at [jrc2270\@cumc.columbia.edu](mailto:jrc2270@cumc.columbia.edu) or visit [my LinkedIn profile](https://www.linkedin.com/in/joshua-carpenter-a119b9140/).

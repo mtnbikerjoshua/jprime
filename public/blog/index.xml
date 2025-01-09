@@ -6,8 +6,15 @@
     <description>Recent content in Blog on jPrime</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 16 Nov 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 21 Dec 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="//localhost:4321/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My 2.5 Hour Commute: Public Transit Inequality in Buenos Aires</title>
+      <link>//localhost:4321/blog/2024-12-21-ba-trains/</link>
+      <pubDate>Sat, 21 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:4321/blog/2024-12-21-ba-trains/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;linea_belgrano_sur_exterior.jpg&#34; /&gt;&lt;/p&gt;&#xA;&lt;p&gt;After just a few days in Buenos Aires, I learned to tell the 96 bus apart from the 98 by their colors, but I still had to step out into the middle of the street to squint for the orange placard with a letter “S” indicating “semirápido,” meaning express. Although several Line 96 buses passed by every hour, only the semirápido towards Pontevedra got me where I needed to go, and those seemed to be the least common. Thankfully, I usually had several podcasts lined up and a set of Spanish flashcards in my bag to keep me entertained. On a good day, I left my apartment at 10:00 a.m. and reached CONIN Merlo, a center for malnourished children and a local chapter of Fundación CONIN, by 12:30 p.m. I had known what I was signing up for when I had booked an Airbnb so far from the center, but I had no other choice. It seemed that there was no safe place to live within two hours of the center on public transit. It didn’t dawn on me until later that the trains had been designed to section off that run-down and malnourished neighborhood from its more affluent neighbors. Though less obvious than Rio De Janeiro’s “wall of shame,” Buenos Aires had its own way of dividing the poor from the rich: public transit.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>No Blog Posts Yet...</title>
       <link>//localhost:4321/blog/2023-11-16-no-posts-yet/</link>
